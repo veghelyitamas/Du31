@@ -1,6 +1,7 @@
 /// @description 
 	if (!global.Pause) exit;
-
+	
+	
 // Key bindings
 
 	input_up_p			= keyboard_check_pressed(global.key_up);
@@ -24,9 +25,9 @@
 				case menu_element_type.slider:
 				
 					switch (menu_option[page]) {
-						case 0: if (!audio_is_playing(snd_levelup)) { audio_play_sound(snd_levelup, 1, false); } break;
-						case 1: if (!audio_is_playing(snd_levelup)) { audio_play_sound(snd_levelup, 1, false); } break;
-						case 2: if (!audio_is_playing(snd_levelup)) { audio_play_sound(snd_levelup, 1, false); } break;
+						case 0: if (!audio_is_playing(mus_main)) { audio_play_sound(mus_main, 1, false); } break;
+						case 1: if (!audio_is_playing(snd_testsound)) { audio_play_sound(snd_testsound, 1, false); } break;
+						case 2: if (!audio_is_playing(mus_main))	{ audio_play_sound(mus_main, 1, false); } break;
 					}
 			
 					var horizontal_input = keyboard_check(global.key_right) - keyboard_check(global.key_left);

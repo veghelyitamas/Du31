@@ -1,5 +1,5 @@
 // Pause
-global.Pause			= true;
+global.Pause			= false;
 global.camera_width		= camera_get_view_width(view_camera[0]);
 global.camera_height	= camera_get_view_height(view_camera[0]);
 
@@ -34,6 +34,9 @@ enum menu_element_type {
 ds_menu_main = create_menu_page(
 	["RESUME",		menu_element_type.script_runner, resume_game],
 	["SETTINGS",	menu_element_type.page_transfer, menu_page.settings],
+	["NEW GAME",	menu_element_type.script_runner, new_game],
+	["SAVE",		menu_element_type.script_runner, save_game],
+	["LOAD",		menu_element_type.script_runner, load_game],
 	["EXIT",		menu_element_type.script_runner, exit_game]
 );
 
@@ -54,7 +57,7 @@ ds_menu_audio = create_menu_page(
 
 ds_menu_difficulty = create_menu_page(
 	["ENEMIES",		menu_element_type.shift, change_difficulty,				0, ["HARMLESS","NORMAL","TERRIBLE"]],
-	["ALLIES",		menu_element_type.shift, change_difficulty,				0, ["DIM-WITTED","NORMAL","HELPFUL"]],
+	["ALLIES",		menu_element_type.shift, change_difficulty,				0, ["DUMB","NORMAL","HELPFUL"]],
 	["BACK",		menu_element_type.page_transfer, menu_page.settings]
 );
 

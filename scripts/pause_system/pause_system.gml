@@ -29,12 +29,12 @@ function create_menu_page(){
 
 function resume_game() {
 	
-	
+	global.Pause			= false;	
 	if debug_mode { show_debug_message("Resume game");}	
 }
 	
 function exit_game() {
-	exit_game();		
+	game_end();		
 }
 
 function change_volume() {
