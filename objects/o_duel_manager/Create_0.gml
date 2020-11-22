@@ -1,7 +1,7 @@
 /// @description Init
 
 
-globalvar DELAYTIME;DELAYTIME = 5;//30
+globalvar DELAYTIME;DELAYTIME = 30;//30
 
 globalvar Opponent_x;	Opponent_x		= display_get_gui_width()/2 +200;
 globalvar Opponent_y;	Opponent_y		= display_get_gui_height()/2;

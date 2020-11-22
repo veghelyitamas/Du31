@@ -50,7 +50,7 @@ if ( ready_player && ready_opponent ) {
 				turn = duel_state.wait;
 				DATA_KilledMonsters ++;
 				
-
+				
 				if (opponent.hp <= 0) {
 					instance_destroy(opponent);
 					// Respawn
@@ -60,6 +60,7 @@ if ( ready_player && ready_opponent ) {
 			}
 			return;
 		case duel_state.opponent:
+
 		if (delay > 0) { delay --;} else 
 			if (player.hp > 0 + opponent.dmg) {
 					player.hp -= opponent.dmg;
